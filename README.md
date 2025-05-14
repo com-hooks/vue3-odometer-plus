@@ -7,6 +7,9 @@ pnpm add odometer vue3-number-odometer -S
 npm install odometer vue3-number-odometer -S
 ```
 ## Example
+- preview image:
+-  ![ui](https://github.com/user-attachments/assets/ec692488-3b78-4c4b-acde-ed1ec115c848)
+
 ```vue
 <template>
     <div class="test">
