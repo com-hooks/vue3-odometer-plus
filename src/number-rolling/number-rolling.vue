@@ -1,5 +1,5 @@
 <template>
-    <div class="vue3-number-roll" :class="theme" ref="odometerEl"></div>
+    <span class="vue3-number-roll" :class="theme" ref="odometerEl"></span>
 </template>
 <script lang="ts" setup>
 import Odometer from 'odometer';
@@ -10,8 +10,8 @@ const {
     start = 0,
     value = 0,
     format = '(d).dd',
-    auto = true,
-    selector,
+    auto = false,
+    selector = '.odometer',
     animation = 'default',
     formatFunction,
     theme = 'default',
@@ -32,7 +32,13 @@ const {
     theme?: 'car' | 'default' | 'digital' | 'minimal' | 'plaza' | 'slot-machine' | 'train-station',
     formatFunction?: (v: number) => number;
     animation?: 'count' | 'default';
-    selector?: '.odometer';
+    /**
+     * @default '.odometer'
+     */
+    selector?: string;
+    /**
+     * @default false
+     */
     auto?: boolean;
 }>();
 onMounted(() => {
@@ -63,5 +69,6 @@ defineExpose({
 <style lang="scss" scoped>
 .vue3-number-roll {
     all: inherit;
+    white-space: nowrap;
 }
 </style>

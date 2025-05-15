@@ -34,8 +34,10 @@ function updateValue() {
 
 <style scoped>
 .test {
-    width: 100%;
     color: rgb(0, 137, 223);
     font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
 }
 </style>

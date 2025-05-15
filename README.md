@@ -8,7 +8,7 @@ npm install odometer vue3-odometer-plus -S
 ```
 ## Example
 - preview image:
--  ![ui](https://github.com/user-attachments/assets/ec692488-3b78-4c4b-acde-ed1ec115c848)
+-  ![ui](https://github.com/user-attachments/assets/7f17e210-6e7d-4daf-a066-c999de39d7d2)
 
 ```vue
 <template>
@@ -63,11 +63,27 @@ function updateValue() {
 type Props = {
     start?: number;
     value: number;
+    /**
+     * The format option allows you to configure how the digit groups are formatted, and how many digits are shown after the decimal point.
+     @default '(d).dd'
+     @example
+        (,ddd)    -  12,345,678
+        (,ddd).dd -  12,345,678.09
+        (.ddd),dd -  12.345.678,09
+        ( ddd),dd -  12 345 678,09
+        d         -  12345678
+     */
     format?: string;
     theme?: 'car' | 'default' | 'digital' | 'minimal' | 'plaza' | 'slot-machine' | 'train-station';
     formatFunction?: (v: number) => number;
     animation?: 'count' | 'default';
-    selector?: '.odometer';
+    /**
+     * @default '.odometer'
+     */
+    selector?: string;
+    /**
+     * @default false
+     */
     auto?: boolean;
 };
 ```
