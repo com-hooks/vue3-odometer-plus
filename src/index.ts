@@ -1,1 +1,1 @@
-export { default } from './number-rolling';
+export { NumberRolling as default, type NumberRollingInstanceType as OdometerInstanceType } from './number-rolling';
