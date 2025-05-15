@@ -1,8 +1,8 @@
 {
-  "name": "vue3-number-odometer",
+  "name": "vue3-odometer-plus",
   "version": "0.1.0",
-  "description": "数字翻滚 number rolling odometer",
-  "main": "dist/es/index.js",
+  "description": "数字翻滚 number rolling odometer odometer-plus",
+  "main": "dist/index.es.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
     "dev": "vite",
@@ -11,8 +11,8 @@
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
-      "import": "./dist/es/index.js",
-      "require": "./dist/cjs/index.js"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
     }
   },
   "files": [
@@ -23,16 +23,17 @@
     "数字翻滚",
     "Vue3",
     "rolling",
-    "odometer"
+    "odometer",
+    "vue3-odometer-plus"
   ],
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "github",
-    "url": "https://github.com/com-hooks/vue3-number-rolling.git"
+    "url": "https://github.com/com-hooks/vue3-odometer-plus.git"
   },
-  "homepage": "https://github.com/com-hooks/vue3-number-rolling",
+  "homepage": "https://github.com/com-hooks/vue3-odometer-plus",
   "author": "mmj",
   "license": "ISC",
   "devDependencies": {
@@ -44,7 +45,7 @@
     "vite-plugin-dts": "^4.5.3",
     "vite-plugin-lib-inject-css": "^2.2.1",
     "vue": "^3.5.13",
-    "vue3-number-odometer": "workspace:*"
+    "vue3-odometer-plus": "workspace:*"
   },
   "dependencies": {
     "odometer": "^0.4.8"

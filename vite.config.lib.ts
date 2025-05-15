@@ -22,6 +22,10 @@ export default defineConfig({
                 `src/**/*d.ts`,
                 `src/**/*.vue`,
             ],
+            exclude: [
+                `src/main.ts`,
+                `src/App.vue`,
+            ]
         }),
     ],
     resolve: {
@@ -41,15 +45,15 @@ export default defineConfig({
         lib: {
             name: "NumberRolling",
             entry: './src/index.ts',
-            formats: ['es', 'cjs'],
-            fileName(fromat, entry) {
-                return `${fromat}/${entry.replace('.vue', '')}.js`;
+            formats: ['es', 'cjs', 'umd'],
+            fileName(fromat) {
+                return `index.${fromat}.js`;
             },
         },
         rollupOptions: {
             output: {
                 inlineDynamicImports: false,
-                preserveModules: true,
+                preserveModules: false,
                 preserveModulesRoot: 'src',
                 assetFileNames: '[ext]/[name].[ext]',
                 globals: {

@@ -1,10 +1,10 @@
-# vue3-odometer-ts
+# vue3-odometer-plus
 
 ## Install
 ```sh
-pnpm add odometer vue3-number-odometer -S
+pnpm add odometer vue3-odometer-plus -S
 # or
-npm install odometer vue3-number-odometer -S
+npm install odometer vue3-odometer-plus -S
 ```
 ## Example
 - preview image:
@@ -35,7 +35,7 @@ npm install odometer vue3-number-odometer -S
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import Vue3OdometerTs from 'vue3-number-odometer';
+import Vue3OdometerTs from 'vue3-odometer-plus';
 // css 对应 theme 按需引入即可
 import 'odometer/themes/odometer-theme-default.css';
 import 'odometer/themes/odometer-theme-car.css';
@@ -58,4 +58,16 @@ function updateValue() {
     font-size: 20px;
 }
 </style>
+```
+```ts
+type Props = {
+    start?: number;
+    value: number;
+    format?: string;
+    theme?: 'car' | 'default' | 'digital' | 'minimal' | 'plaza' | 'slot-machine' | 'train-station';
+    formatFunction?: (v: number) => number;
+    animation?: 'count' | 'default';
+    selector?: '.odometer';
+    auto?: boolean;
+};
 ```
