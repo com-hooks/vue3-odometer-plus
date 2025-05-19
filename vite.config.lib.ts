@@ -37,9 +37,6 @@ export default defineConfig({
         ],
     },
     build: {
-        watch: {
-            include: ['./src/**']
-        },
         outDir: './dist',
         cssCodeSplit: false,
         lib: {

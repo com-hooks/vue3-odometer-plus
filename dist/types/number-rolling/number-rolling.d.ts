@@ -23,6 +23,10 @@ type __VLS_Props = {
      * @default false
      */
     auto?: boolean;
+    /**
+     * @default 1000
+     */
+    duration?: number;
 };
 declare function update(v: number): void;
 declare const _default: import('vue').DefineComponent<__VLS_Props, {

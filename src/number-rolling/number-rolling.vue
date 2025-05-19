@@ -15,6 +15,7 @@ const {
     animation = 'default',
     formatFunction,
     theme = 'default',
+    duration = 1000,
 } = defineProps<{
     start?: number;
     value: number;
@@ -40,6 +41,10 @@ const {
      * @default false
      */
     auto?: boolean;
+    /**
+     * @default 1000
+     */
+    duration?: number;
 }>();
 onMounted(() => {
     old.value = new Odometer({
@@ -49,7 +54,7 @@ onMounted(() => {
         el: renderElRef.value,
         value: start,
         format,
-        duration: 1000,
+        duration,
         theme,
         formatFunction,
     });

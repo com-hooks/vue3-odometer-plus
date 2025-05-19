@@ -1,6 +1,6 @@
-import { defineComponent as r, useTemplateRef as f, shallowRef as m, onMounted as c, watchPostEffect as d, createElementBlock as s, openBlock as i, normalizeClass as v } from "vue";
+import { defineComponent as r, useTemplateRef as f, shallowRef as d, onMounted as m, watchPostEffect as c, createElementBlock as i, openBlock as s, normalizeClass as v } from "vue";
 import h from "odometer";
-import './css/index.css';const p = /* @__PURE__ */ r({
+import './css/index.css';const E = /* @__PURE__ */ r({
   __name: "number-rolling",
   props: {
     start: { default: 0 },
@@ -10,11 +10,12 @@ import './css/index.css';const p = /* @__PURE__ */ r({
     formatFunction: { type: Function },
     animation: { default: "default" },
     selector: { default: ".odometer" },
-    auto: { type: Boolean, default: !1 }
+    auto: { type: Boolean, default: !1 },
+    duration: { default: 1e3 }
   },
   setup(e, { expose: o }) {
-    const a = f("odometerEl"), t = m();
-    c(() => {
+    const a = f("odometerEl"), t = d();
+    m(() => {
       t.value = new h({
         auto: e.auto,
         selector: e.selector,
@@ -22,10 +23,10 @@ import './css/index.css';const p = /* @__PURE__ */ r({
         el: a.value,
         value: e.start,
         format: e.format,
-        duration: 1e3,
+        duration: e.duration,
         theme: e.theme,
         formatFunction: e.formatFunction
-      }), d(() => {
+      }), c(() => {
         t.value.update(e.value);
       });
     });
@@ -36,17 +37,17 @@ import './css/index.css';const p = /* @__PURE__ */ r({
     return o({
       old: t,
       update: n
-    }), (l, u) => (i(), s("span", {
+    }), (l, u) => (s(), i("span", {
       class: v(["vue3-number-roll", l.theme]),
       ref: "odometerEl"
     }, null, 2));
   }
-}), E = (e, o) => {
+}), F = (e, o) => {
   const a = e.__vccOpts || e;
   for (const [t, n] of o)
     a[t] = n;
   return a;
-}, b = /* @__PURE__ */ E(p, [["__scopeId", "data-v-7fc8a4ea"]]);
+}, g = /* @__PURE__ */ F(E, [["__scopeId", "data-v-11734211"]]);
 export {
-  b as default
+  g as default
 };
