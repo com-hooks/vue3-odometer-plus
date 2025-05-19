@@ -3,6 +3,7 @@
 </template>
 <script lang="ts" setup>
 import Odometer from 'odometer';
+import './theme-default.css';
 import { onMounted, shallowRef, useTemplateRef, watchPostEffect } from 'vue';
 const renderElRef = useTemplateRef("odometerEl");
 const old = shallowRef();
@@ -75,5 +76,6 @@ defineExpose({
 .vue3-number-roll {
     all: inherit;
     white-space: nowrap;
+
 }
 </style>

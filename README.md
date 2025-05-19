@@ -2,23 +2,48 @@
 
 ## Install
 ```sh
-pnpm add odometer vue3-odometer-plus -S
-# or
-npm install odometer vue3-odometer-plus -S
+pnpm add vue3-odometer-plus
 ```
 ## Example
 - preview image:
 -  ![ui](https://github.com/user-attachments/assets/7f17e210-6e7d-4daf-a066-c999de39d7d2)
 
+- 简单的
+```vue
+<template>
+    <button @click="updateValue()">update</button>
+    <hr>
+    <div class="test">
+        <Vue3OdometerTs :value="count"></Vue3OdometerTs>
+        <Vue3OdometerTs :value="count" animation="count"></Vue3OdometerTs>
+    </div>
+</template>
+<script lang="ts" setup>
+import { ref } from 'vue';
+import Vue3OdometerTs from 'vue3-odometer-plus';
+
+const count = ref(1000);
+function updateValue() {
+    count.value = Math.random() * 1200;
+}
+</script>
+
+<style scoped>
+.test {
+    color: rgb(0, 137, 223);
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+</style>
+```
+
+- odometer内置Style
 ```vue
 <template>
     <div class="test">
         <button @click="updateValue()">update</button>
-        <hr>
-        <Vue3OdometerTs :value="count"></Vue3OdometerTs>
-        <hr>
-        <Vue3OdometerTs :value="count" animation="count"></Vue3OdometerTs>
-        <hr>
         <Vue3OdometerTs :value="count" theme="car"></Vue3OdometerTs>
         <hr>
         <Vue3OdometerTs :value="count" theme="digital"></Vue3OdometerTs>
@@ -36,8 +61,7 @@ npm install odometer vue3-odometer-plus -S
 <script lang="ts" setup>
 import { ref } from 'vue';
 import Vue3OdometerTs from 'vue3-odometer-plus';
-// css 对应 theme 按需引入即可
-import 'odometer/themes/odometer-theme-default.css';
+// css 对应 template 中 的theme 按需引入即可
 import 'odometer/themes/odometer-theme-car.css';
 import 'odometer/themes/odometer-theme-digital.css';
 import 'odometer/themes/odometer-theme-minimal.css';
@@ -59,6 +83,8 @@ function updateValue() {
 }
 </style>
 ```
+
+- Props
 ```ts
 type Props = {
     start?: number;
@@ -85,5 +111,9 @@ type Props = {
      * @default false
      */
     auto?: boolean;
+    /**
+     * @default 1000
+     */
+    duration?: number;
 };
 ```

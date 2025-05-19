@@ -1,6 +1,6 @@
 {
   "name": "vue3-odometer-plus",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "数字翻滚 number rolling odometer odometer-plus",
   "main": "dist/index.es.js",
   "types": "dist/types/index.d.ts",
