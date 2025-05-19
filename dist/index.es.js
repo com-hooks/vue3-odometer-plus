@@ -1,4 +1,4 @@
-import { defineComponent as r, useTemplateRef as d, shallowRef as f, onMounted as m, watchPostEffect as c, createElementBlock as i, openBlock as s, normalizeClass as v } from "vue";
+import { defineComponent as r, useTemplateRef as f, shallowRef as m, onMounted as d, watchPostEffect as c, createElementBlock as i, openBlock as s, normalizeClass as v } from "vue";
 import h from "odometer";
 import './css/index.css';const E = /* @__PURE__ */ r({
   __name: "number-rolling",
@@ -14,8 +14,8 @@ import './css/index.css';const E = /* @__PURE__ */ r({
     duration: { default: 1e3 }
   },
   setup(e, { expose: o }) {
-    const a = d("odometerEl"), t = f();
-    m(() => {
+    const a = f("odometerEl"), t = m();
+    d(() => {
       t.value = new h({
         auto: e.auto,
         selector: e.selector,
@@ -42,12 +42,13 @@ import './css/index.css';const E = /* @__PURE__ */ r({
       ref: "odometerEl"
     }, null, 2));
   }
-}), F = (e, o) => {
+}), R = (e, o) => {
   const a = e.__vccOpts || e;
   for (const [t, n] of o)
     a[t] = n;
   return a;
-}, g = /* @__PURE__ */ F(E, [["__scopeId", "data-v-cc622e6d"]]);
+}, F = /* @__PURE__ */ R(E, [["__scopeId", "data-v-cafa4138"]]);
 export {
-  g as default
+  F as NumberRolling,
+  F as default
 };

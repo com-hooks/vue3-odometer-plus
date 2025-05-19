@@ -15,7 +15,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import Vue3OdometerTs from 'vue3-odometer-plus';
+import Vue3OdometerTs, { OdometerProps, OdometerInstanceType } from 'vue3-odometer-plus';
 // css 对应 template 中 的theme 按需引入即可
 import 'odometer/themes/odometer-theme-car.css';
 import 'odometer/themes/odometer-theme-digital.css';
