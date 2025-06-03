@@ -46,8 +46,10 @@ defineExpose({
 </script>
 <style lang="scss" scoped>
 .vue3-number-roll {
-    all: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    font-style: inherit;
     white-space: nowrap;
-
 }
 </style>

@@ -47,7 +47,7 @@ import './css/index.css';const E = /* @__PURE__ */ r({
   for (const [t, n] of o)
     a[t] = n;
   return a;
-}, F = /* @__PURE__ */ R(E, [["__scopeId", "data-v-cafa4138"]]);
+}, F = /* @__PURE__ */ R(E, [["__scopeId", "data-v-5fa56450"]]);
 export {
   F as NumberRolling,
   F as default
